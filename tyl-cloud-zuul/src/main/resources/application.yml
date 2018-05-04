@@ -1,0 +1,26 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: service-zuul
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+    api-c:
+      path: /api-c/**
+      serviceId: config-client
+    baidu:
+      path: /myGit/**
+      url: http://www.ityouknow.com/
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: service-ribbon
+server:
+  port: 8830
+#spring.cloud.loadbalance.retry.enabled=true ribbon重试机制，默认false关闭

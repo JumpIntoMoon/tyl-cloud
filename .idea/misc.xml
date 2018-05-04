@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-eurekaclient/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-config/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-bussnissservice/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-business/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-eureka-client/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/tyl-cloud-config-client/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="10" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
