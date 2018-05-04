@@ -19,10 +19,16 @@
     </parent>
 
     <dependencies>
-        <!--该包为路由层必备包，缺少之后将无法注册到eureka服务器-->
+        <!--eureka 将该服务注册到注册中心-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+
+        <!--为zuul增加重试功能-->
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
         </dependency>
 
         <dependency>

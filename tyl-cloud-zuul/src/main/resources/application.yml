@@ -17,8 +17,13 @@ zuul:
       path: /api-c/**
       serviceId: config-client
     baidu:
-      path: /myGit/**
-      url: http://www.ityouknow.com/
+      path: /spring-cloud/**
+      url: https://github.com/JumpIntoMoon/tyl-cloud
+  retryable: true #是否开启重试功能，默认不开启。开启重试会造成压力扩散，在高访问量时有可能造成服务瘫痪，要慎用
+
+ribbon:
+  MaxAutoRetries: 2 #对当前服务的重试次数
+  MaxAutoRetriesNextServer: 0 #切换相同Server的次数
 
 eureka:
   client:

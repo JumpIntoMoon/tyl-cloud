@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
  **/
 @Component
 public class MyFilter extends ZuulFilter {
-    private static Logger log = LoggerFactory.getLogger(MyFilter.class);
+    private static Logger logger = LoggerFactory.getLogger(MyFilter.class);
 
     @Override
     public String filterType() {
@@ -43,10 +43,10 @@ public class MyFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
+        logger.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
         Object accessToken = request.getParameter("token");
         if (accessToken == null) {
-            log.warn("token is empty");
+            logger.warn("token is empty");
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
             try {
@@ -56,7 +56,7 @@ public class MyFilter extends ZuulFilter {
 
             return null;
         }
-        log.info("ok");
+        logger.info("ok");
         return null;
     }
 }
