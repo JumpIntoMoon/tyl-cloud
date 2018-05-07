@@ -1,0 +1,25 @@
+#配置为高可用的注册中心：
+#按照官方文档的指示，需要改变etc/hosts，linux系统通过vim /etc/hosts ,加上：
+#127.0.0.1 peer1
+#127.0.0.1 peer2
+#127.0.0.1 peer3
+#windows电脑，在c:/windows/systems/drivers/etc/hosts 修改
+server:
+  port: 8763
+
+spring:
+  application:
+    name: service-registry
+  profiles: peer3
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: peer3
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
