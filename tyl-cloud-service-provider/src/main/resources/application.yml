@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: service-provider
+  zipkin:
+    base-url: http://localhost:8820 #zipkin服务器的地址
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+server:
+  port: 8766

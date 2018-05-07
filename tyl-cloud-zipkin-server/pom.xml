@@ -9,35 +9,42 @@
     <packaging>jar</packaging>
 
     <name>tyl-cloud-zipkin-server</name>
-    <description>Demo project for Spring Boot</description>
+    <description>服务链路追踪</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>10</java.version>
-        <spring-cloud.version>Finchley.RC1</spring-cloud.version>
+        <spring-cloud.version>Edgware.SR1</spring-cloud.version>
     </properties>
-
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--zipkin相关依赖-->
+        <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-ui</artifactId>
+        </dependency>
+        <!--注册到eureka服务器-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
     </dependencies>
-
+    <!--配置spring cloud 依赖的统一版本-->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -50,6 +57,7 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--包构建工具-->
     <build>
         <plugins>
             <plugin>
@@ -59,6 +67,7 @@
         </plugins>
     </build>
 
+    <!--依赖仓库-->
     <repositories>
         <repository>
             <id>spring-milestones</id>
@@ -69,6 +78,4 @@
             </snapshots>
         </repository>
     </repositories>
-
-
 </project>

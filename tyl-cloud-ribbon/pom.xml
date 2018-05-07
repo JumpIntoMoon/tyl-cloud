@@ -25,7 +25,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--该包为路由层必备包，缺少之后将无法注册到eureka服务器-->
+        <!--注册到eureka服务器-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>

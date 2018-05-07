@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tyl.cloud</groupId>
-    <artifactId>tyl-cloud-zuul</artifactId>
+    <artifactId>tyl-cloud-service-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>tyl-cloud-zuul</name>
-    <description>路由服务</description>
+    <name>tyl-cloud-service-provider</name>
+    <description>服务提供者</description>
 
     <parent>
         <groupId>com.tyl.cloud</groupId>
@@ -19,21 +19,14 @@
     </parent>
 
     <dependencies>
-        <!--eureka 将该服务注册到注册中心-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-
-        <!--为zuul增加重试功能-->
-        <dependency>
-            <groupId>org.springframework.retry</groupId>
-            <artifactId>spring-retry</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
 
         <!--增加服务链路跟踪功能-->
